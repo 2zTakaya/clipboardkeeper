@@ -44,7 +44,8 @@
     <p>
       Clipboard Keeper can also save images when you share an image to the app or use the app's
       save action while an image is on the clipboard. Images are saved in their original format.
-      Location information is removed from JPEG images when they are saved, but some formats,
+      For JPEG images, location information in the EXIF and XMP metadata is removed when they are
+      saved, and an image whose location information cannot be removed is not saved. Other formats,
       such as HEIC, may be saved with location information included. Images such as screenshots
       can contain personal or sensitive information.
     </p>
@@ -68,7 +69,7 @@
       When you enable the app lock, history access is protected by the biometrics or device credential configured on your
       device. Android automatic backup and device-to-device transfer are disabled for the app.
       You can delete individual entries or all history within the app at any time. Deleting an
-      image entry also deletes its image file from the app's storage.
+      image entry also deletes its image file and any copies made for pasting or sharing from the app's storage.
     </p>
     <p>
       If you choose to create an encrypted backup, the backup is protected with the password
@@ -124,8 +125,8 @@
     </p>
     <p>
       画像をアプリに共有したとき、またはクリップボードに画像がある状態でアプリ内の保存操作を行ったときは、画像も保存します。
-      画像は元の形式のまま保存します。JPEG 画像の位置情報は保存時に削除しますが、HEIC など一部の形式では位置情報を含んだまま
-      保存される場合があります。スクリーンショットなどの画像には、個人情報または機微な情報が含まれる場合があります。
+      画像は元の形式のまま保存します。JPEG 画像は保存時に EXIF と XMP の位置情報を削除し、削除できない画像は保存しません。HEIC など
+      その他の形式では、位置情報を含んだまま保存される場合があります。スクリーンショットなどの画像には、個人情報または機微な情報が含まれる場合があります。
     </p>
     <p>
       保存する内容によっては、個人情報または機微な情報が含まれる場合があります。履歴は端末内にのみ保存され、開発者やクラウドサーバーへ
@@ -143,7 +144,7 @@
     <p>
       アプリの認証ロックを有効にした場合、履歴へのアクセスは端末に設定された生体認証または端末認証で保護されます。Android の自動バックアップおよび端末間移行は
       アプリで無効化しています。アプリ内から、個別の履歴またはすべての履歴をいつでも削除できます。画像の履歴を削除すると、
-      アプリ内に保存された画像ファイルも削除されます。
+      アプリ内に保存された画像ファイルと、貼り付けや共有のために作成した複製も削除されます。
     </p>
     <p>
       暗号化バックアップを作成する場合、バックアップはユーザーが設定したパスワードで保護され、ユーザーが選択した保存先にのみ書き込まれます。
