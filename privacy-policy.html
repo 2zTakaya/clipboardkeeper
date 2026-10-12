@@ -24,7 +24,7 @@
 <body>
   <main>
     <h1>Clipboard Keeper Privacy Policy</h1>
-    <p class="updated">Last updated: September 12, 2026</p>
+    <p class="updated">Last updated: October 12, 2026</p>
 
     <p>
       This Privacy Policy explains how Clipboard Keeper, provided by 2zoo App Studio,
@@ -34,18 +34,36 @@
     <h2>Clipboard history</h2>
     <p>
       Clipboard Keeper saves text when you use a supported capture action, such as the app's
-      save action, Android's text-selection action, or Android's share menu. Versions that include the optional keyboard
-      also support automatic saving of copied text. This feature is off by default and requires
-      your confirmation in keyboard settings. While this keyboard is selected and its service
-      is running, copied text can be saved even when the keyboard is not visible. Copies may
-      include passwords or verification codes. You can turn automatic saving off at any time.
-      Clipboard Keeper does not use Accessibility services to collect clipboard history.
+      save action, Android's text-selection action, or Android's share menu. It can also save
+      an image shared to the app or saved from the clipboard using the app's save action.
+      The optional keyboard supports automatic saving. Text saving is off by default and
+      requires confirmation in keyboard settings. Image auto-saving is also off by default and
+      additionally requires reading its explanation and explicitly choosing to enable it.
+      Previous notice-read status does not grant this permission. Going back, cancelling or
+      opening settings does not enable image saving. Image saving works only while basic
+      automatic saving is on, this keyboard is selected and its service is running; the keyboard
+      need not be visible. Images can be disabled separately while text saving continues and
+      existing history is kept. This image permission does not restrict manual save or share actions. Clipboard Keeper does not use Accessibility
+      services to collect clipboard history.
     </p>
     <p>
-      Saved clipboard text can contain personal or sensitive information depending on what you
-      choose to save. History is stored only on your device and is not sent to the developer or
-      to a cloud server. The app does not provide user accounts, advertising, analytics, or
-      crash-reporting services.
+      Saved text and images, including screenshots, may contain passwords, verification codes,
+      personal information or other sensitive information. Images are kept in their source
+      format, and the app creates thumbnails for display. For JPEG images, the app processes
+      its saved copy to remove supported EXIF GPS fields, such as latitude and longitude,
+      and recognized XMP metadata. This may also remove non-location information in XMP.
+      If this processing or its verification fails, the JPEG image is not saved. The source
+      file in the originating app is not modified. This processing does not guarantee removal
+      of every possible location indicator or all metadata, and does not remove information
+      visible in the image. Other supported formats, including HEIC, GIF, PNG and WebP, do not
+      receive this JPEG-specific metadata processing and may retain metadata or location information.
+    </p>
+    <p>
+      History and image files are stored in the app's private storage on your device.
+      Clipboard Keeper does not automatically upload clipboard history, images or thumbnails
+      to the developer or a cloud server. The app does not provide user accounts, advertising,
+      analytics or crash-reporting services. User-directed sharing, pasting and backup destinations
+      are described below.
     </p>
 
     <h2>Keyboard input</h2>
@@ -56,16 +74,47 @@
       or a cloud conversion service. Software and dictionary licenses are available in the app.
     </p>
 
-    <h2>Security and deletion</h2>
+    <h2>Image copies and sharing</h2>
     <p>
-      When you enable the app lock, history access is protected by the biometrics or device credential configured on your
-      device. Android automatic backup and device-to-device transfer are disabled for the app.
-      You can delete individual entries or all history within the app at any time.
+      When you copy or share a saved image, the app creates a separate copy for that action.
+      It uses Android content URIs and read permissions so a pasting app or the sharing app you
+      select can read that copy, rather than exposing the saved history image directly.
+      A recipient app or service may keep or upload the image under its own policies.
     </p>
     <p>
-      If you choose to create an encrypted backup, the backup is protected with the password
-      that you choose and is written only to the location you select. Clipboard Keeper does not
-      receive a copy of that backup or its password.
+      Older copies become eligible for cleanup after about one hour and are removed when the app
+      next performs cleanup; deletion is not scheduled at an exact wall-clock time. The most recent
+      copy may be kept longer so pasting remains possible, until its source history image is removed
+      or another applicable cleanup occurs. Copies are not automatically removed merely because
+      the clipboard changes or sharing finishes. Device clock changes and older timestamp data may
+      affect cleanup timing.
+    </p>
+    <p>
+      Importing images also creates temporary files in the app's storage. The app attempts to
+      remove them when processing ends or during later cleanup. Interrupted processing, an
+      unresponsive source app or storage errors can delay cleanup.
+    </p>
+
+    <h2>Security and deletion</h2>
+    <p>
+      When you enable the app lock, history access is protected by the biometrics or device
+      credential configured on your device. Android automatic backup and device-to-device
+      transfer are disabled for the app. You can delete individual entries or all history in the app.
+    </p>
+    <p>
+      An individually deleted image may be retained briefly for the undo action. After undo and
+      other necessary processing end, the app performs cleanup of image files, thumbnails and
+      copy/share duplicates that are no longer referenced by its history. Cleanup may also run
+      when the app starts again after interruption. Deleting an entry does not change the original
+      file in another app, or erase copies already received by another app or service. Storage
+      errors or interrupted processing can delay removal from the app's storage.
+    </p>
+    <p>
+      If you create an encrypted backup, it is protected with the password you choose and written
+      to the destination you select. Clipboard Keeper does not receive the backup or its password.
+      Saved images are currently excluded from the app's encrypted history backups and text-history
+      exports. If you select a cloud-backed document provider as a destination, that provider may
+      store or sync the file according to its own policies.
     </p>
 
     <h2>Purchases</h2>
@@ -98,7 +147,7 @@
     <hr class="section-divider">
 
     <h1>Clipboard Keeper プライバシーポリシー</h1>
-    <p class="updated">最終更新日: 2026年9月12日</p>
+    <p class="updated">最終更新日: 2026年10月12日</p>
 
     <p>
       本プライバシーポリシーは、2zoo App Studio が提供する Clipboard Keeper が情報をどのように取り扱うかを説明するものです。
@@ -107,15 +156,23 @@
 
     <h2>クリップボード履歴</h2>
     <p>
-      Clipboard Keeper は、アプリ内の保存操作、Android のテキスト選択メニュー、Android の共有メニューなどの取り込み操作で
-      テキストを保存します。キーボード対応バージョンには、コピーした文章の自動保存機能もあります。初期状態ではオフで、キーボード設定での
-      説明確認と有効化が必要です。このキーボードを選択中にサービスが動作していれば、キーボードが非表示でもコピーを保存する場合が
-      あります。コピーしたパスワードや認証コードも保存対象になり得ます。自動保存はいつでも停止できます。
-      アクセシビリティ サービスを使って履歴を収集することはありません。
+      Clipboard Keeper は、アプリ内の保存操作、Android のテキスト選択メニュー、共有メニューなど、対応する取り込み操作でテキストを保存します。
+      アプリへ共有した画像や、クリップボードにある画像をアプリ内の保存操作で保存することもできます。
+      任意で使用するキーボードには自動保存機能があります。テキストの自動保存は初期状態でオフで、キーボード設定での確認と有効化が必要です。
+      画像の自動保存も初期状態でオフで、さらに説明を読んで明確に有効化する操作が必要です。以前の案内を読んだ状態だけで画像保存を許可したことにはしません。
+      戻る、キャンセル、設定画面への移動では画像の自動保存は有効になりません。画像は、基本の自動保存がオンで、このキーボードを選択中にサービスが動作している場合に保存します。
+      キーボードが非表示でも対象になります。画像だけをいつでもオフにでき、テキスト保存と保存済み履歴は維持します。この画像許可は手動の保存や共有には適用しません。アクセシビリティサービスを使って履歴を収集することはありません。
     </p>
     <p>
-      保存する内容によっては、個人情報または機微な情報が含まれる場合があります。履歴は端末内にのみ保存され、開発者やクラウドサーバーへ
-      送信されません。ユーザーアカウント、広告、分析、クラッシュレポートの機能は提供していません。
+      保存するテキストや画像には、パスワード、認証コード、個人情報その他の機密情報が含まれる場合があります。スクリーンショットも同様です。
+      画像は取り込み元の形式で保存し、表示用のサムネイルを作成します。JPEG 画像は、アプリに保存するコピーに対して、緯度・経度などの対応する EXIF GPS 項目と、
+      認識できる XMP メタデータを除去する処理を行います。XMP の位置情報以外の項目も除去される場合があります。この処理や確認に失敗した JPEG 画像は保存しません。
+      共有元のアプリなどにある元ファイルは変更しません。この処理は、あらゆる位置情報やすべてのメタデータの除去を保証するものではなく、画像に写っている情報を消すものでもありません。
+      HEIC、GIF、PNG、WebP など、その他の対応形式にはこの JPEG 向けの処理を行わないため、メタデータや位置情報が残る場合があります。
+    </p>
+    <p>
+      履歴と画像ファイルは端末上のアプリ専用領域に保存します。Clipboard Keeper が履歴の内容、画像、サムネイルを開発者やクラウドサーバーへ自動送信することはありません。
+      ユーザーアカウント、広告、解析、クラッシュレポートの機能は提供していません。ユーザー操作による共有、貼り付け、バックアップの保存先については以下に説明します。
     </p>
 
     <h2>キーボード入力</h2>
@@ -125,14 +182,34 @@
       使用しているソフトウェアと辞書のライセンスはアプリ内から確認できます。
     </p>
 
-    <h2>セキュリティと削除</h2>
+    <h2>画像のコピーと共有</h2>
     <p>
-      アプリの認証ロックを有効にした場合、履歴へのアクセスは端末に設定された生体認証または端末認証で保護されます。Android の自動バックアップおよび端末間移行は
-      アプリで無効化しています。アプリ内から、個別の履歴またはすべての履歴をいつでも削除できます。
+      保存した画像をコピーまたは共有すると、アプリはその操作用の複製を作成します。履歴に保存した画像を直接公開する代わりに、Android の content URI と読み取り権限を使い、
+      貼り付け先のアプリやユーザーが選んだ共有先に複製を読み取らせます。受け取ったアプリやサービスが画像を保存したり、サーバーへ送信したりする場合は、その提供元の取り扱いに従います。
     </p>
     <p>
-      暗号化バックアップを作成する場合、バックアップはユーザーが設定したパスワードで保護され、ユーザーが選択した保存先にのみ書き込まれます。
-      Clipboard Keeper はバックアップやそのパスワードのコピーを受け取りません。
+      古い複製は通常、約1時間経過すると削除対象になり、その後アプリがクリーンアップを行う際に削除します。時刻が来た瞬間に削除する仕組みではありません。
+      最新の複製は貼り付けに使えるよう、元の画像履歴の削除など、適用されるクリーンアップまで長く保持される場合があります。
+      クリップボードが変わっただけ、または共有が終わっただけで複製が自動削除されるわけではありません。端末の時計変更や古い時刻データによって清掃の時期が変わる場合があります。
+    </p>
+    <p>
+      画像の取り込みでも、アプリの領域に一時ファイルを作成します。処理終了時や後のクリーンアップで削除を試みますが、処理の中断、取り込み元アプリの応答停止、保存領域のエラーなどで削除が遅れる場合があります。
+    </p>
+
+    <h2>セキュリティと削除</h2>
+    <p>
+      アプリの認証ロックを有効にした場合、履歴へのアクセスは端末に設定された生体認証または端末認証で保護されます。
+      Android の自動バックアップおよび端末間移行はアプリで無効化しています。アプリ内から、個別の履歴またはすべての履歴を削除できます。
+    </p>
+    <p>
+      個別に削除した画像は、削除取り消しのため短い間保持される場合があります。取り消し期間や必要な処理が終わった後、履歴から参照されなくなった画像ファイル、サムネイル、
+      コピー・共有用の複製を削除する処理を行います。中断後の次回起動時にもクリーンアップを行う場合があります。
+      履歴の削除は、他のアプリにある元ファイルを変更したり、共有先などがすでに受け取った画像を削除したりするものではありません。
+      保存領域のエラーや処理の中断などで、アプリ内のファイル削除が遅れる場合があります。
+    </p>
+    <p>
+      暗号化バックアップは、ユーザーが選んだパスワードで保護し、選んだ保存先へ書き込みます。Clipboard Keeper はバックアップやそのパスワードのコピーを受け取りません。
+      保存した画像は現在、アプリの暗号化履歴バックアップやテキスト履歴の書き出しに含まれません。クラウドと連携する文書プロバイダーを保存先に選んだ場合、その提供元の取り扱いに従って保存・同期されることがあります。
     </p>
 
     <h2>購入</h2>
