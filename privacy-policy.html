@@ -24,7 +24,7 @@
 <body>
   <main>
     <h1>Clipboard Keeper Privacy Policy</h1>
-    <p class="updated">Last updated: October 12, 2026</p>
+    <p class="updated">Last updated: October 15, 2026</p>
 
     <p>
       This Privacy Policy explains how Clipboard Keeper, provided by 2zoo App Studio,
@@ -82,12 +82,21 @@
       A recipient app or service may keep or upload the image under its own policies.
     </p>
     <p>
-      Older copies become eligible for cleanup after about one hour and are removed when the app
+      For copies created by the app's copy or share actions, older copies become eligible for cleanup after about one hour and are removed when the app
       next performs cleanup; deletion is not scheduled at an exact wall-clock time. The most recent
       copy may be kept longer so pasting remains possible, until its source history image is removed
       or another applicable cleanup occurs. Copies are not automatically removed merely because
       the clipboard changes or sharing finishes. Device clock changes and older timestamp data may
       affect cleanup timing.
+    </p>
+    <p>
+      When you paste a saved image from keyboard history, the app creates a separate copy in its private
+      storage and grants the destination app temporary read access. These keyboard-paste copies become
+      eligible for cleanup about one hour after creation, including the most recent copy, and are removed
+      during a subsequent cleanup. Removing the individual source history entry does not immediately
+      remove a copy already handed to another app. Clearing all history attempts to remove these copies. Cleanup is not scheduled at an exact time, and storage errors or
+      interrupted processing can delay file removal. The destination app may retain or upload its own copy
+      under its own policies.
     </p>
     <p>
       Importing images also creates temporary files in the app's storage. The app attempts to
@@ -147,7 +156,7 @@
     <hr class="section-divider">
 
     <h1>Clipboard Keeper プライバシーポリシー</h1>
-    <p class="updated">最終更新日: 2026年10月12日</p>
+    <p class="updated">最終更新日: 2026年10月15日</p>
 
     <p>
       本プライバシーポリシーは、2zoo App Studio が提供する Clipboard Keeper が情報をどのように取り扱うかを説明するものです。
@@ -188,9 +197,12 @@
       貼り付け先のアプリやユーザーが選んだ共有先に複製を読み取らせます。受け取ったアプリやサービスが画像を保存したり、サーバーへ送信したりする場合は、その提供元の取り扱いに従います。
     </p>
     <p>
-      古い複製は通常、約1時間経過すると削除対象になり、その後アプリがクリーンアップを行う際に削除します。時刻が来た瞬間に削除する仕組みではありません。
+      アプリ内のコピー・共有操作で作成する複製では、古い複製は通常、約1時間経過すると削除対象になり、その後アプリがクリーンアップを行う際に削除します。時刻が来た瞬間に削除する仕組みではありません。
       最新の複製は貼り付けに使えるよう、元の画像履歴の削除など、適用されるクリーンアップまで長く保持される場合があります。
       クリップボードが変わっただけ、または共有が終わっただけで複製が自動削除されるわけではありません。端末の時計変更や古い時刻データによって清掃の時期が変わる場合があります。
+    </p>
+    <p>
+      キーボードの履歴から保存画像を貼り付ける場合は、アプリ内の非公開領域に貼り付け用の複製を別途作成し、貼り付け先に一時的な読み取り権限を渡します。この複製は最新のものも含め、作成から約1時間後に削除対象となり、その後のクリーンアップで削除します。すでに貼り付け先へ渡した複製は、元の画像履歴を個別に削除しても直ちには削除されません。履歴をすべて消去すると、これらの複製ファイルの削除を試みます。決まった時刻に削除する仕組みではなく、保存領域のエラーや処理の中断などで削除が遅れる場合があります。貼り付け先が受け取った画像を保存・送信する場合は、その提供元の取り扱いに従います。
     </p>
     <p>
       画像の取り込みでも、アプリの領域に一時ファイルを作成します。処理終了時や後のクリーンアップで削除を試みますが、処理の中断、取り込み元アプリの応答停止、保存領域のエラーなどで削除が遅れる場合があります。
